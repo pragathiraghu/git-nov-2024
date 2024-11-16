@@ -1,0 +1,40 @@
+git add is a Git command used to add changes in your working directory to the staging area. These changes could include newly created files, modified files, or deleted files. Once the changes are staged, they are ready to be committed to the repository.
+
+Usage
+Basic syntax:
+
+bash
+Copy code
+git add <file>
+This stages a specific file.
+
+Add multiple files:
+
+bash
+Copy code
+git add <file1> <file2>
+Stages multiple files.
+
+Stage all changes:
+
+bash
+Copy code
+git add .
+Stages all changes (new, modified, and deleted files) in the current directory and its subdirectories.
+
+Examples
+Add a single file:
+
+bash
+Copy code
+git add index.html
+Add all files in the current directory:
+
+bash
+Copy code
+git add .
+Add a specific type of file (e.g., .txt files):
+
+bash
+Copy code
+git add *.txt
