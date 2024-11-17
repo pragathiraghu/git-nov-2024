@@ -1,0 +1,122 @@
+git revert is a command in Git used to create a new commit that undoes changes made by a previous commit. It is useful when you want to reverse specific changes without rewriting history.
+
+Syntax
+******git revert <commit-hash>*****
+
+It doesn't delete commits but creates a new commit that undoes the specified commit's changes.
+By default, git revert opens an editor to create a commit message for the revert. You can bypass this by using the -m flag.
+Use --no-edit to skip editing the default commit message.
+
+1. Revert a Single Commit
+git revert abc123
+This creates a new commit that reverses the changes made in the commit abc123.
+
+2. Revert Multiple Commits
+To revert multiple commits in sequence:
+git revert abc123 def456
+
+
+
+Share
+
+
+You said:
+git revert
+ChatGPT said:
+ChatGPT
+git revert is a command in Git used to create a new commit that undoes changes made by a previous commit. It is useful when you want to reverse specific changes without rewriting history. Unlike git reset, which modifies the commit history, git revert keeps the history intact by appending a new commit that negates the changes.
+
+Syntax
+bash
+Copy code
+git revert <commit-hash>
+Key Details
+Safe Reversal:
+It doesn't delete commits but creates a new commit that undoes the specified commit's changes.
+Commit Message:
+By default, git revert opens an editor to create a commit message for the revert. You can bypass this by using the -m flag.
+Interactive Mode:
+Use --no-edit to skip editing the default commit message.
+Example Usage
+1. Revert a Single Commit
+bash
+Copy code
+git revert abc123
+This creates a new commit that reverses the changes made in the commit abc123.
+
+2. Revert Multiple Commits
+To revert multiple commits in sequence:
+git revert abc123 def456
+
+3. Revert with No Commit git revert abc123 --no-commit
+This stages the changes for you to review before committing.
+
+4. Revert a Merge Commit
+Reverting a merge commit requires specifying a parent commit using the -m option:
+git revert -m 1 <merge-commit-hash>
+Here, 1 refers to the parent branch you want to keep as the base.
+
+5.Undoing a git revert
+If you make a mistake during the revert, you can undo it by using git reset (if the commit hasn't been pushed) or revert the revert commit itself:
+git revert <revert-commit-hash>
+
+
+********As a DevOps engineer, understanding git revert is crucial for maintaining a clean and traceable commit history in collaborative environments. It's especially useful in scenarios where changes need to be undone without rewriting history, which is vital in CI/CD pipelines and production systems and It ensures quick and safe rollbacks, minimizing downtime and disruption.****************************
+
+Common Misconceptions
+git revert deletes the original commit:
+No, it creates a new commit that reverses the changes but keeps the original commit intact.
+
+You cannot undo a revert:
+A revert can itself be reverted if needed.
+
+It's the same as git reset:
+Unlike reset, which alters commit history, revert is additive and safe for collaborative environments.
+
+
+********************practice purpose*****************************************
+
+How it Works
+Identify the commit to be reverted:
+
+bash
+Copy code
+git log --oneline
+Find the commit hash of the change you want to undo.
+
+Revert the commit:
+
+bash
+Copy code
+git revert <commit-hash>
+This creates a new commit that negates the changes made by the specified commit.
+
+Push the changes to the remote repository:
+
+bash
+Copy code
+git push origin <branch>
+Practical Example
+Suppose a commit introduced a bug in production, and you need to reverse it without affecting other changes:
+
+Identify the problematic commit using git log.
+Run:
+bash
+Copy code
+git revert <commit-hash>
+Git will prompt you to write a revert commit message.
+Push the changes to the repository, ensuring the pipeline picks up the fix.
+Advanced Usage
+Reverting Multiple Commits:
+Revert a range of commits to undo a series of changes:
+
+bash
+Copy code
+git revert --no-commit <commit1> <commit2>
+git commit -m "Reverted multiple commits"
+Reverting Merge Commits:
+When reverting a merge, specify which parent branch to retain:
+
+bash
+Copy code
+git revert -m 1 <merge-commit-hash>
