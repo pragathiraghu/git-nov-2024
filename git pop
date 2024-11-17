@@ -1,0 +1,24 @@
+When people refer to "git pop", they’re usually shorthand for the git stash pop command, which is part of the Git stash functionality. Here's a clearer breakdown:
+
+What Does git stash pop Do?
+
+defination*******************git stash pop restores (or "pops") the changes you previously saved using git stash back into your working directory***********************
+It’s called "pop" because it removes the changes from the stash and applies them to your current working directory.
+
+Example Scenario:
+You're working on a project, but you’re not ready to commit your changes.
+
+You stash your changes to temporarily save them:
+git stash
+
+Later, you come back to the same branch and want to bring those stashed changes back, so you run:
+
+
+git stash pop
+This restores your changes and removes them from the stash.
+If you have multiple stashes, git stash pop will bring back the most recent one.
+
+Summary of Key Commands:
+git stash: Saves your current changes temporarily (like putting them in a "drawer").
+git stash pop: Brings back (or pops) the changes from your "drawer" and applies them to your working directory.
+git stash apply: Similar to git stash pop, but it doesn't remove the changes from the stash. You can reuse the stash later if needed.
