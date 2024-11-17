@@ -1,0 +1,22 @@
+What is a Merge Conflict?
+A merge conflict occurs when two or more developers make changes to the same part of a file, and version control systems (like Git) can’t figure out how to automatically combine those changes.
+
+Simple Explanation:
+Imagine you're working on a project with a team. You and a teammate both edit the same line of code or part of a file, and then you both try to merge your changes into the main project. Since Git doesn't know which change should be kept, it flags a conflict and asks you to manually resolve it.
+
+Your Change: You change a line in a file like this:
+print("Hello from Developer A")
+
+Teammate's Change: Your teammate changes the same line to:
+print("Hello from Developer B")
+
+Now, when you try to combine both changes, Git doesn't know which line to keep, so it results in a merge conflict.
+
+How to Resolve it:
+To resolve this, as a DevOps engineer, you'd need to:
+
+Check the conflict: Git will mark the conflict in the file, showing both changes with special markers (<<<<<<<, =======, >>>>>>>).
+Decide what to keep: You manually choose which changes to keep. This could be one version, a combination of both, or even a completely different solution.
+Commit the resolved file: Once the conflict is resolved, you commit the changes and the merge process continues.
+
+How to prevent it? Frequent commits, good branching practices, automated testing, and continuous integration pipelines help reduce merge conflicts
