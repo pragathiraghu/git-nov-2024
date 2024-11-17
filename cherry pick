@@ -1,0 +1,15 @@
+In Git, "cherry-pick" refers to selecting specific commits from one branch and applying them to another branch. It's like picking individual items from a list rather than taking everything.
+
+For example, if you have a branch with many commits, but you only want to apply one or two of them to another branch, you can use git cherry-pick. This allows you to bring over just those changes, instead of merging the entire branch.
+
+  Example:
+You have two branches: main and feature.
+  
+The feature branch has 5 commits, but you only want to apply commit #3 to the main branch.
+  
+You would do:
+Checkout the main branch: git checkout main
+
+Cherry-pick the specific commit from feature: git cherry-pick <commit-hash-of-#3> (commit id)
+  
+This way, only the changes from that specific commit are added to the main branch, leaving the rest behind.
