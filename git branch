@@ -1,0 +1,51 @@
+git branch command is used to manage branches in a Git repository. Here’s a breakdown of its usage:
+
+Viewing Branches
+
+git branch
+This lists all the branches in your repository. The currently active branch is marked with an asterisk (*) and highlighted.
+
+Creating a New Branch
+
+git branch <branch_name>
+This creates a new branch called <branch_name> without switching to it.
+
+Switching to a Branch
+
+git checkout <branch_name>
+or, in newer Git versions:
+
+
+git switch <branch_name>
+Creating and Switching to a Branch
+
+git checkout -b <branch_name>
+or:
+git switch -c <branch_name>
+
+Renaming a Branch
+git branch -m <new_name>
+
+If you're on the branch you want to rename, omit the branch name:
+git branch -m
+
+Deleting a Branch
+
+Delete a local branch:
+git branch -d <branch_name>
+
+Use -D to force deletion if the branch is not fully merged:
+git branch -D <branch_name>
+
+Delete a remote branch:
+git push origin --delete <branch_name>
+
+Comparing Branches
+To compare two branches:
+git diff <branch1>..<branch2>
+
+Listing Remote Branches
+git branch -r
+
+Listing All Branches (Local and Remote)
+git branch -a
