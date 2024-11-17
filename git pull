@@ -1,0 +1,7 @@
+git pull is a fundamental command used to synchronize the local repository with the remote repository. It combines two actions: fetching updates from the remote repository (git fetch) and merging those updates into the current branch (git merge).
+
+git pull to:
+Fetch the latest changes made by other developers or automation tools.
+Ensure the local repository reflects the latest configurations or code changes.
+
+In CI/CD workflows, I often automate this step in pipelines to keep build agents or deployment nodes synchronized with the remote repository. If conflicts arise during a git pull,
