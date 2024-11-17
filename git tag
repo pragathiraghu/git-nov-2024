@@ -1,0 +1,18 @@
+In simplest terms, a git tag is like a bookmark in a Git repository that points to a specific commit. It is typically used to mark important points in a project's history, like a release or a version. For example, when you reach a stable version of your code, you can create a tag (like "v1.0") to easily reference that point later.
+
+Unlike branches, which are meant to be worked on, tags are usually meant to stay fixed and are not updated.
+
+
+***********************************Knowledge purpose and explanation purpose if asked in interview************************************
+
+A git tag is a lightweight reference to a specific commit in your Git repository, typically used to mark a release or milestone, like v1.0.0 or release-2024. Tags are static — once they're created, they don’t change, unlike branches. This makes them ideal for denoting stable points in your project history, such as versions or deployment candidates.
+
+Tags come in two types:
+
+Lightweight tags: Simple pointers to a commit, like a branch, but they don’t contain any metadata.
+Annotated tags: These store extra metadata (like the tagger’s name, date, and a message), making them more suitable for version releases.
+In DevOps, tags are crucial for:
+
+Versioning: Using tags in your CI/CD pipeline ensures that deployments can be traced back to a specific commit.
+Automation: Tags can trigger automatic deployment to environments, for example, deploying only when a new tag is pushed, signifying a stable version ready for release.
+You might also use tags to trigger actions in tools like Jenkins, GitLab CI, or GitHub Actions, ensuring your automation pipeline aligns with the tagged version.
