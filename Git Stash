@@ -1,0 +1,62 @@
+The git stash command is a useful feature in Git that temporarily saves changes in your working directory that aren't yet ready to be committed. It allows you to clean your working directory without discarding your uncommitted changes. Here's a breakdown of its functions and use cases:
+
+Functions of git stash
+Save Work in Progress: Temporarily store uncommitted changes (both staged and unstaged) while switching to another branch or working on a different task.
+Command: git stash
+
+View Stashed Changes: See a list of stashed changes.
+Command: git stash list
+
+Apply Stashed Changes: Reapply the most recent stash or a specific stash.
+Command: git stash apply [stash@{n}]
+
+Remove Stash After Applying: Pop and remove the stash after applying it.
+Command: git stash pop [stash@{n}]
+
+Create a Stash With a Message: Add a custom message for your stash to identify it easily.
+Command: git stash save "message"
+
+Stash Specific Changes: Stash only certain files.
+Command: git stash push -m "message" [path/to/file]
+
+Drop a Stash: Delete a specific stash.
+Command: git stash drop [stash@{n}]
+
+Clear All Stashes: Remove all stashed entries.
+Command: git stash clear
+
+Inspect Stash Contents: View the changes stored in a stash.
+Command: git stash show [stash@{n}] (use -p to see a patch view)
+
+*****************************************************knowledge purpose*************************************************
+
+When to Use git stash
+Switching Branches Without Committing:
+
+If you're working on a branch and need to switch to another branch but have uncommitted changes.
+Example:
+bash
+Copy code
+git stash
+git checkout feature-branch
+Pulling Updates Without Losing Work in Progress:
+
+If you need to pull updates from a remote repository but have changes in your working directory that would cause conflicts.
+Example:
+bash
+Copy code
+git stash
+git pull origin main
+git stash pop
+Prototyping or Experimenting:
+
+When testing a quick idea that you don't want to commit yet.
+Partially Complete Work:
+
+When your current work is incomplete, and you want to start a new task but don't want to commit incomplete changes.
+Selective Stashing:
+
+If you want to stash changes in a single file or specific files without affecting the rest of your working directory.
+Cleaning Up a Messy Working Directory:
+
+If you have many changes and need to start fresh but may want to revisit the stashed changes later.
