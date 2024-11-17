@@ -1,0 +1,22 @@
+Key Differences:
+Impact on History:
+
+git revert does not modify history but adds a new commit that undoes changes. The commit history remains intact.
+git reset rewrites history, especially when using --hard or --soft, as it can move HEAD and potentially discard commits.
+Effect on Working Directory:
+
+git revert does not affect your working directory (other than potentially creating conflicts when applying the reversal).
+git reset can modify your working directory and staging area, depending on the reset mode used.
+Use Case:
+
+git revert is best used when working in a shared or public branch, where you want to keep a record of changes but undo specific commits.
+git reset is useful for local changes or when cleaning up commit history, but it can be dangerous in shared branches because it rewrites history.
+Risk:
+
+git revert is safe for shared repositories because it does not rewrite history.
+git reset can be risky if used incorrectly in shared repositories, as it can rewrite history, causing problems for collaborators.
+
+Summary:
+Revert: Undoes changes by creating a new commit that reverses a previous commit.
+Reset: Moves the HEAD pointer and optionally modifies the staging area and working directory, rewriting history.
+
