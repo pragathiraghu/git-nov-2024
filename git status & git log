@@ -1,0 +1,22 @@
+*********************************git log**********************************
+git log shows you the history of commits in your Git repository. It gives a list of all commits made in the current branch (or any branch you specify). This includes details like:
+
+The commit hash (a unique identifier for each commit)
+The author of the commit
+The commit date and time
+The commit message
+
+You can add options to customize the output, like git log --oneline for a shorter version of the log with just the commit hash and message.
+*******************************git status***************************************
+git status
+git status shows the current state of your working directory and staging area. It tells you:
+
+Which files have been modified
+Which files are staged (ready to be committed)
+Which files are untracked (not added to Git yet)
+It helps you keep track of your changes and see what needs to be committed or pushed.
+
+In short:
+
+git log shows commit history.
+git status shows the current state of your project, including what changes are made and what needs to be done.
