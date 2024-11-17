@@ -1,0 +1,7 @@
+git commit command is used to save your changes to the local repository. It's like creating a snapshot of your project at a specific point in time
+Commit Changes: After staging, commit your changes with a meaningful message:
+git commit -m "Your commit message here"
+Commit with Detailed Message (Optional): If you want to write a more detailed message, you can leave out the -m flag, and Git will open a text editor:
+git commit
+Amend a Commit (Optional): If you want to edit your last commit
+git commit --amend
