@@ -1,0 +1,42 @@
+What is Git?
+Git is a distributed version control system (VCS) that helps developers track changes in source code, collaborate on projects, and manage different versions of their files.
+
+Key Features:
+
+Version Tracking: Tracks changes in code and allows you to revert to previous states if needed.
+Branching and Merging: Developers can work on different features or bug fixes simultaneously in isolated branches and merge them back when complete.
+Distributed System: Every developer has a full copy of the repository on their local machine.
+Fast and Efficient: Optimized for speed and handles large projects well.
+Common Git Commands:
+
+git init: Initialize a new repository.
+git clone: Copy a repository from a remote server to your local machine.
+git add: Stage changes for commit.
+git commit: Save your changes in the local repository.
+git push: Upload local changes to a remote repository.
+git pull: Fetch and merge updates from a remote repository.
+Example Use Case: A DevOps engineer uses Git to manage infrastructure-as-code (IaC) repositories. When introducing changes to Terraform files, you can create a branch, commit the updates, and collaborate with peers for code reviews.
+
+What is GitHub?
+GitHub is a platform built on top of Git that provides:
+
+Cloud-based Repository Hosting: Stores Git repositories online.
+Collaboration Tools: Offers features like pull requests, issue tracking, and code reviews.
+Integration with CI/CD Tools: Supports workflows for automated builds, testing, and deployments (e.g., GitHub Actions).
+Community and Open Source: Encourages open-source contributions and showcases projects.
+Key GitHub Features:
+Pull Requests: A feature to propose and review code changes before merging.
+Forks: Make a copy of a repository to work on without affecting the original project.
+Issues: A tool for tracking bugs, tasks, and feature requests.
+Actions: Automate workflows directly from the repository, such as deployments.
+Example Use Case: In a DevOps role, you might store Ansible playbooks or Kubernetes manifests on GitHub. Using GitHub Actions, you could automate the deployment of these configurations whenever changes are pushed to the main branch.
+
+Key Differences Between Git and GitHub
+Feature	Git	GitHub
+Definition	Version control system for tracking changes.	Online platform for hosting Git repositories and collaborating.
+Use Case	Manages local repositories and enables version control.	Centralized collaboration, CI/CD, and project management.
+Online/Offline	Works offline.	Requires internet to access repositories.
+Ownership	Open-source tool.	Owned by Microsoft.
+Summary
+Git is the engine (version control system).
+GitHub is the car (a web-based service built around Git for collaboration and automation).
