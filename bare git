@@ -1,0 +1,9 @@
+A bare Git repository is a special type of Git repository that doesn’t have a working directory. Instead, it only contains the Git metadata (like the .git directory) without the actual files of the project. This is commonly used for sharing repositories and as a central repository in collaborative workflows.
+
+Characteristics of a Bare Repository:
+No Working Directory:
+It lacks a working copy of the project files. Only the Git history and configuration are stored.
+Ends with .git by Convention:
+Typically, the repository's folder name ends with .git, e.g., project.git.
+Used for Collaboration:
+Often acts as a remote repository where team members push their changes.
