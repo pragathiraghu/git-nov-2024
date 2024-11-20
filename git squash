@@ -1,0 +1,62 @@
+
+Git squash is a method of condensing multiple commits into a single commit, often used to simplify and clean up the commit history before merging a branch into the main branch. It is typically done during an interactive rebase.
+
+Here’s a simplified breakdown:
+
+Why Use Git Squash?
+Clean Commit History: Combine small, related changes into one meaningful commit.
+Avoid Clutter: Prevent numerous minor commits from appearing in the main branch.
+Improve Code Review: Make it easier for reviewers to understand the changes.
+
+
+Git squash is a method of condensing multiple commits into a single commit, often used to simplify and clean up the commit history before merging a branch into the main branch. It is typically done during an interactive rebase.
+
+Here’s a simplified breakdown:
+
+Why Use Git Squash?
+Clean Commit History: Combine small, related changes into one meaningful commit.
+Avoid Clutter: Prevent numerous minor commits from appearing in the main branch.
+Improve Code Review: Make it easier for reviewers to understand the changes.
+Steps to Squash Commits
+Start Interactive Rebase:
+
+bash
+Copy code
+git rebase -i HEAD~N
+Replace N with the number of commits you want to squash (e.g., HEAD~3 for the last 3 commits).
+
+Mark Commits for Squashing:
+
+In the text editor that opens, you'll see a list of commits, each labeled with pick:
+sql
+Copy code
+pick abc123 Commit message 1
+pick def456 Commit message 2
+pick ghi789 Commit message 3
+Change all but the first pick to squash (or s):
+sql
+Copy code
+pick abc123 Commit message 1
+squash def456 Commit message 2
+squash ghi789 Commit message 3
+Edit Commit Message:
+
+After saving the changes, Git will prompt you to edit the commit message. Combine or modify the messages as needed to describe the squashed commit clearly.
+Complete the Rebase:
+
+Save and exit the editor. Git will squash the commits and rewrite the history.
+Push the Changes (if needed):
+
+If you've already pushed the commits to a remote branch, you'll need to force-push the changes:
+bash
+Copy code
+git push origin branch-name --force
+Practical Use Case
+Imagine you're working on a feature branch and have made multiple commits:
+
+fix typo in function name
+update README
+add new feature
+Before merging into the main branch, you can squash these into a single commit like:
+
+add new feature with README update and typo fix
